@@ -1,10 +1,11 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
 import './index.css'
-import App from './components/App'
 import registerServiceWorker from './registerServiceWorker'
 import { createStore, applyMiddleware, compose } from 'redux'
-import reducer from './reducers'
+import routes from './routes'
+import thunk from 'redux-thunk'
+import reducer from './reducers/index'
 import { Provider } from 'react-redux'
 
 const logger = store => next => action => {
@@ -19,9 +20,9 @@ const logger = store => next => action => {
 const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose
 
 const store = createStore(
-  reducer,
+  rootReducer,
   composeEnhancers(
-    applyMiddleware(logger)
+    applyMiddleware(logger, thunk)
   )
 )
 

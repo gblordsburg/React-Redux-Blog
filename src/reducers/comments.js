@@ -13,6 +13,11 @@ const COMMENTS_INITIAL_STATE = {
 		error:null,
 		loading: false,
 	},
+	editComment:{
+		post:null,
+		error: null,
+		loading: false,
+	},
 	newComment:{
 		post:null,
 		error: null,

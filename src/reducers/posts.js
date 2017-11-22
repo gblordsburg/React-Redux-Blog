@@ -12,8 +12,8 @@ import {
 			error:null,
 			loading: true,
 		},
-		filteredPostsList: {
-			posts: [],
+		editPost: {
+			posts: null,
 			error:null,
 			loading: true,
 		},

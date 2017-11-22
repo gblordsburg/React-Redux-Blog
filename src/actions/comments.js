@@ -1,5 +1,4 @@
-import axios from 'axios';
-import * as CommentsAPI from '../api-server/posts.js';
+import * as CommentsAPI from '../api-server/comments.js';
 
 //Comment list
 export const GET_COMMENTS = 'GET_COMMENTS';
